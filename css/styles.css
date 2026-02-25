@@ -13,9 +13,9 @@ body {
     line-height: 1.6;
 }
 
-header h1 {
+header  {
 
-    background-color: #4CAF50;
+    background-color: #af4c89;
 
     Color: white;
 
@@ -32,7 +32,7 @@ header h1 {
 
 nav a {
      
-    color:white;
+    color: rgb(0, 0, 0);
 
     text-decoration: none;
 
