@@ -95,7 +95,7 @@ p{
 
 a{
 
-    color: #af4c89;
+    color: #afa54c;
 
     text-decoration: none;
 
@@ -110,7 +110,7 @@ a:hover {
 
 img{
 
-    border: 5px solid #af4caf;
+    border: 5px solid #af874c;
 
     border-radius: 10px;
 
@@ -118,7 +118,7 @@ img{
 
 main a[href^="mailto: "] {
 
-    color : #ff5722;
+    color : #fbff22;
 
     font-weight: bold;
 
