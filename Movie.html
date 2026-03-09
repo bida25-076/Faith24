@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Menu</title>
+    <title>Movies</title>
 
     <!-- Bootstrap CSS -->
 
@@ -42,13 +42,13 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="movie.html">Movie</a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="testimonials.html">Testimonials</a>
+                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="menu.html">Menu</a> 
+                       <a class="nav-link" href="testimonial.html">Testimonials</a> 
                     </li>
                 </ul>
             </div>
@@ -61,94 +61,85 @@
 <main>
 
 
-<section id="menu">
-    <h2>Our menu</h2>
+<table>
+    <h2>Our movies</h2>
 
-    <div class="menu-item">
-        <img src="images/chocolate-cake.jpg"alt="Chocolate Cake" width="200">
-        <h3>Chocolate cake</h3>
-        <p>P100</p>
-    </div>
+    <tr>
+      <th>Movie</th> 
+      <th>Genre</th>
+      <th>Time</th>
+      <th>Price</th>
+    </tr>
 
-    <div class="menu-item">
-        <img src="images/red velvet-cake.jpg" alt="Red Velvet" width="200">
-        <h3>Red velvet</h3>
-        <p>P120</p>
-    </div>
+    <tr>
+        <td><img src="images/IMG_7675-scaled.jpeg" width="100"></td>
+        <td>Avengers</td>
+        <td>Action</td>
+        <td>14:00</td>
+        <td>P80.00</td>
+    </tr>
 
-    <div class="menu-item">
-        <img src="images/cheese danish.jpg" alt="cheese Danish" width="200">
-        <h3>Cheese danish</h3>
-        <p>P50</p>
-    </div>
+    <tr>
+        <td><img src="images/OIP (1).webp" width="100"></td>
+        <td>Batman</td>
+        <td>Action</td>
+        <td>18:30</td>
+        <td>P90.00</td>
+    </tr>
 
-    <div class="menu-item">
-        <img src="images/oatmeal raisins.jpg" alt="Oatmeal raisins" width="200">
-        <h3>Oatmeal raisins</h3>
-        <p>P35</p>
+<tr>
+    <td><img src="images/OIP.webp" width="100"></td>
+    <td>Frozen</td>
+    <td>Animation</td>
+    <td>16:00</td>
+    <td>P70.00</td>
+</tr>
+
+<tr>
+    <td><img src="images/OIP (2).webp" width="100">ss</td>
+    <td>Pink panther</td>
+    <td>Animation</td>
+    <td>08:00</td>
+    <td>P80.00</td>
+</tr>
+
+</table>
+
+
 
     </div>
 </section>
 
 <section>
-    <h2>Place Your Order</h2>
+    <h2>Book your ticket</h2>
 
     <form>
-        <label>Select Item:</label><br>
+        <label>Select movie:</label><br>
         <select>
-            <Option>Pastries</Option>
-            <option>Cakes</option>
-            <Option>Cookies</Option>
+            <Option>Avengers</Option>
+            <option>Batman</option>
+            <Option>Frozen</Option>
+            <Option>Pink panther</Option>
         </select><br><br>
 
-        <label>Quantity:</label><br>
-        <input type="number"
-        min="1"><br><br>
+        <label>Name:</label><br>
+        <input type="text"><br><br>
 
-        <button type="submit">Order Now</button>
+         <label>Email:</label><br>
+        <input type="email"><br><br>
+
+         <label>Movie:</label><br>
+        <input type="text"><br><br>
+
+          <label>Number of tickets:</label><br>
+        <input type="number"><br><br>
+
+
+
+        <button type="submit">Book Now</button>
 
     </form>
-</section>
 
-<section>
-    <h2>Our Menu</h2>
-
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Size</th>
-        </tr>
-
-        <tr>
-            <td>Chocolate Cake</td>
-            <td>P120</td>
-            <td>medium</td>
-        </tr>
-
-        <tr>
-
-        <td>Red velvet Cake</td>
-        <td>P15</td>
-        <td>single</td>
-        </tr>
-
-        <tr>
-            <td>Oatmeal Raisins</td>
-            <td>P25</td>
-            <td>5pieces</td>
-
-
-        </tr>
-
-        <tr>
-
-        <td>Cheese Danish</td>
-        <td>P30</td>
-        <td>5pieces</td>
-
-        </tr>
-    </table>
 
 
 </section>
@@ -159,7 +150,7 @@
 
 <footer>
 
-    <p>&copy;@2026 Sweet Treats Bakery.All rights reserved. </p>
+    <p>&copy;@2026 WW Star Cinema.All rights reserved. </p>
 
 </footer>
 
