@@ -8,7 +8,9 @@ body {
  
 /* Navbar */
 nav {
-    background-color: #35520600;
+
+background-color: rgba(9, 12, 4, 0.6);
+
     padding: 15px;
     text-align: center;
 }
