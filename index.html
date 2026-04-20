@@ -65,54 +65,41 @@
 
  <main>
 
-    <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Experience the Magic of Cinema</h1>
-      <p>Latest blockbusters, crystal-clear sound, unforgettable moments.</p>
-      <button>View Showtimes</button>
-    </div>
-  </section>
-
-
- <!-- Now Showing -->
-  <section class="movies">
-    <h2>Now Showing</h2>
-
-  <div class="carousel-container">
-  <button class="arrow left">&#10094;</button>
-  
-  <div class="movie-carousel">
-    <div class="movie-card">
-       <img src="images/thunderbolts_-footage.avif" width="200">
-      <h3>Movie Title</h3>
-      <button>More Info</button>
-    </div>
+  <section class="movies-section">
  
-    <div class="movie-card">
-      <img src="images/3ed42a3e_master.jpg" width="200">
-      <h3>Movie Title</h3>
-      <button>More Info</button>
-    </div>
+  <h2>Now Showing</h2>
+ 
+  <!-- Buttons -->
+  <div class="movie-buttons">
+    <button onclick="filterMovies('all')">All</button>
+    <button onclick="filterMovies('showing')">Now Showing</button>
+    <button onclick="filterMovies('coming')">Coming Soon</button>
   </div>
-
-  <div class="movie-card">
-        <img src="images/movie.jpg" width="200">
-        <h3>Movie Title</h3>
-        <button>More Info</button>
-      </div>
-
-      <div class="movie-card">
-        <src img="images/poster-placeholder.jpg"  width="200">
-        <h3>Movie Title</h3>
-        <button>More Info</button>
-      </div>
  
-  <button class="arrow right">&#10095;</button>
-</div>
-
-  </section>
-
+  <!-- Movies Container -->
+  <div class="movies-container">
+ 
+    <div class="movie-card showing">
+      <img src="images/sanandres.jpg" alt="San Andres">
+      <h3>San Andres 2</h3>
+      <button>More Info</button>
+    </div>
+ 
+    <div class="movie-card showing">
+      <img src="images/thunderbolts.jpg" alt="Thunderbolts">
+      <h3>Thunderbolts</h3>
+      <button>More Info</button>
+    </div>
+ 
+    <div class="movie-card coming">
+      <img src="images/movie3.jpg" alt="Movie">
+      <h3>Coming Movie</h3>
+      <button>More Info</button>
+    </div>
+ 
+  </div>
+ 
+</section>
  </main>
 
 <footer>
@@ -127,6 +114,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
  
-
+<script>
+function filterMovies(category) {
+  let movies = document.querySelectorAll('.movie-card');
+ 
+  movies.forEach(movie => {
+    if (category === 'all') {
+      movie.style.display = 'block';
+    } else if (movie.classList.contains(category)) {
+      movie.style.display = 'block';
+    } else {
+      movie.style.display = 'none';
+    }
+  });
+}
+</script>
 </body>
 </html>
