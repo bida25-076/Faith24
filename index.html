@@ -73,6 +73,14 @@
       <button>View Showtimes</button>
     </div>
   </section>
+
+   <!-- Buttons -->
+  <div class="movie-buttons">
+    <button onclick="filterMovies('all')">All</button>
+    <button onclick="filterMovies('showing')">Now Showing</button>
+    <button onclick="filterMovies('coming')">Coming Soon</button>
+  </div>
+ 
  
   <!-- Now Showing -->
   <section class="movies">
@@ -80,7 +88,7 @@
  
     <div class="movie-grid">
       <div class="movie-card">
-        <img src="images/3ed42a3e_master.jpg" width="300">
+        <img src="images/thunderbolts_-footage.avif" width="300">
         <h3>Movie Title</h3>
         <button>More Info</button>
       </div>
@@ -92,24 +100,16 @@
       </div>
  
       <div class="movie-card">
-        <img src="images/3ed42a3e_master.jpg" width="300">
+        <img src="images/Sinners-movie-poster.png" width="300">
         <h3>Movie Title</h3>
         <button>More Info</button>
       </div>
     </div>
   </section>
- 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Your Cinema. All rights reserved.</p>
-  </footer>
- 
-  js/main.jsscript>
- 
- 
-  </div>
- 
+ <section class="movies-section">
+
 </section>
+ 
  </main>
 
 <footer>
@@ -124,20 +124,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
  
-<script>
-function filterMovies(category) {
-  let movies = document.querySelectorAll('.movie-card');
- 
-  movies.forEach(movie => {
-    if (category === 'all') {
-      movie.style.display = 'block';
-    } else if (movie.classList.contains(category)) {
-      movie.style.display = 'block';
-    } else {
-      movie.style.display = 'none';
-    }
-  });
-}
-</script>
+
 </body>
+
 </html>
