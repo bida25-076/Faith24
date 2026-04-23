@@ -1,19 +1,29 @@
 body {
-    margin: 0;
+
     font-family: Arial, sans-serif;
     background-image: url(../images/cinema-film-strip-wave-reel-600nw-1484469773.webp);
-    color:#bdbcba;
+    color:#c2bebe;
+     transition: background-color 0.3s, color 0.3s;
+        margin: 0;
+    padding: 0;
+    line-height: 1.6;
     
 }
  
-/* Navbar */
-nav {
-
-background-color: rgba(9, 12, 4, 0.6);
-
-    padding: 15px;
+header {
+    background-color: #070707;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
+
+header h1 {
+    margin: 0;
+}
+
+
+
+/* Navbar */
  
 nav a {
     color: white;
@@ -40,15 +50,33 @@ nav a:hover {
     text-align: center;
     color: white;
 }
+
+footer { 
+
+    background-color: #1d1b1b; 
+
+    color: rgb(143, 143, 143); 
+
+    text-align: center; 
+
+    padding: 5px; 
+
+    position: fixed; 
+
+    bottom: 0; 
+
+    width: 100%; 
+
+} 
  
 .hero h1 {
     font-size: 60px;
-    text-shadow: 2px 2px 8px rgba(22, 2, 2, 0.555);
+    text-shadow: 2px 2px 8px rgba(250, 250, 250, 0.555);
 }
  
 .hero p {
     font-size: 22px;
-    text-shadow: 1px 1px 5px rgb(5, 1, 1);
+    text-shadow: 1px 1px 5px rgb(216, 206, 206);
 }
  
 /* Tables (Movies Page) */
@@ -79,7 +107,7 @@ td img {
 form {
     text-align: center;
     margin: 30px;
-    background-color: #222;
+    background-color: #080808;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -103,40 +131,9 @@ input[type="submit"] {
 }
  
 input[type="submit"]:hover {
-    background-color: #e6b800;
-}
+    background-color: #070707;
  
-/* Testimonials */
-.testimonial-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px;
 }
- 
-.testimonial-box {
-    background-color: #ddd4d4;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    text-align: center;
-}
- 
-.testimonial-box p {
-    font-style: italic;
-    margin: 10px 0;
-}
- 
-.testimonial-box span {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #ffcc00;
-}
- 
 .movies-section {
   text-align: center;
   padding: 40px;
@@ -165,30 +162,96 @@ input[type="submit"]:hover {
 .movies-container {
   display: flex;
   justify-content: center; /* THIS centers horizontally */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
 }
  
 /* Movie Card */
 .movie-card {
-  width: 200px;
+  width: 260px;
   background: #111;
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
+  margin: 0 15px;
+}
+
+.movie-card{
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover{
+    transform: scale(1.07);
 }
  
-.movie-card img {
-  width: 100%;
-  border-radius: 10px;
-}
- 
-.movie-card button {
-  margin-top: 10px;
+.movie-section {
+  margin-top: -70px;
   padding: 8px;
-  background: rgb(32, 31, 31);
-  color: white;
-  border: none;
+  background: rgb(32, 31, 31); 
   cursor: pointer;
 }
+
+.movie-card img {
+    height: 360px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+body.dark-mode { 
+
+    background-color: #333333; 
+
+    color: #f9f9f9; 
+
+} 
+
+body.dark-mode nav { background-color: #222222; } 
+
+#theme-toggle { padding: 8px 16px; cursor: pointer; margin: 10px; }
+#back-to-top { 
+
+    display: none; 
+
+    position: fixed; 
+
+    bottom: 20px; 
+
+    right: 20px; 
+
+    background-color: #2c2e2c; 
+
+    color: white; 
+
+    width: 50px; 
+
+    height: 50px; 
+
+    border-radius: 50%; 
+
+    border: none; 
+
+    font-size: 24px; 
+
+    cursor: pointer; 
+
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
+
+    transition: background-color 0.3s; 
+
+} 
+
+#back-to-top:hover { background-color: #212221; } 
+.filter-btn { 
+
+    padding: 8px 16px; margin: 5px; 
+
+    border: 1px solid #0e0f0e; 
+
+    background: white; color: #000000; 
+
+    cursor: pointer; border-radius: 4px; 
+
+} 
