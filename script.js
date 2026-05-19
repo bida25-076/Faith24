@@ -113,3 +113,29 @@ button.addEventListener('click', function() {
     } 
 
 });  
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+
+    $to = "anesuf77@gmail.com"; // YOUR EMAIL
+    $subject = "New Contact Form Message";
+
+    $body = ''
+    Name : $name 
+    Email: $email
+    Message: $message
+    
+
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+         "Message sent successfully!";
+    } else {
+     "Failed to send message.";
+    }
+}
+
+''
