@@ -114,28 +114,28 @@ button.addEventListener('click', function() {
 
 });  
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function(event) {
 
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    event.preventDefault();
 
-    $to = "anesuf77@gmail.com"; // YOUR EMAIL
-    $subject = "New Contact Form Message";
+    emailjs.sendForm(
+      "service_kyzr0f1",
+      "template_ukkn3h9",
+      this
+    )
+    .then(function() {
 
-    $body = ''
-    Name : $name 
-    Email: $email
-    Message: $message
-    
+      alert("Message Sent Successfully!");
 
-    $headers = "From: $email";
+    })
+    .catch(function(error) {
 
-    if (mail($to, $subject, $body, $headers)) {
-         "Message sent successfully!";
-    } else {
-     "Failed to send message.";
-    }
-}
+      console.log(error);
 
-''
+      alert("Failed to send");
+
+    });
+
+});
