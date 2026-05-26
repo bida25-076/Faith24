@@ -1,126 +1,29 @@
-console.log("JavaScript is connected!"); 
-const toggleButton = document.getElementById('theme-toggle'); 
+  console.log("JavaScript is connected!"); 
+  
+document.getElementById("contact-Form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
- 
+    alert("Thank you for contacting us! we will get back to you as soon as possible.");
 
-const backToTopButton = document.getElementById('back-to-top'); 
+    document.getElementById("contact-message").style.display = "block";
+    this.reset();
+  });
 
- 
-
-window.addEventListener('scroll', function() { 
-
-    if (window.scrollY > 300) { 
-
-        backToTopButton.style.display = 'block'; 
-
-    } else { 
-
-        backToTopButton.style.display = 'none'; 
-
-    } 
-
-}); 
-
- 
-
-backToTopButton.addEventListener('click', function() { 
-
-    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-
-});
-
-const filterButtons = document.querySelectorAll('.filter-btn'); 
-
-const movies = document.querySelectorAll('.movie-card'); 
-
- 
-
-filterButtons.forEach(button => { 
-
-    button.addEventListener('click', function() { 
-
-        filterButtons.forEach(btn => btn.classList.remove('active')); 
-
-        this.classList.add('active'); 
-
-        const filterValue = this.getAttribute('data-filter'); 
-
-        movies.forEach(movie => { 
-
-            if (filterValue === 'all') { 
-
-                movie.style.display("block"); 
-
-            } else { 
-
-                const categories = movie.getAttribute('data-category'); 
-
-                if (movie.classlist.contains(filterValue)) { 
-
-                    movie.style.display('block'); 
-
-                } else { 
-
-                    movie.style.display('none'); 
-
-                } 
-
-            } 
-
-        }); 
-
-    }); 
-
-});
-const infoButton = document.querySelectorAll('more-info'); 
-
-const Movietitle = document.getElementById('movie title'); 
- 
-
-button.addEventListener('click', function() { 
-
-    // Toggle the fact visibility 
-
-    funFact.classList.toggle('show'); 
-
- 
-
-    // Change button text based on visibility 
-
-    if (funFact.classList.contains('show')) { 
-
-        revealButton.textContent = 'This movie won 3 awards!'; 
-
-    } else { 
-
-        revealButton.textContent = '🔍 Click here to learn more about the movie!'; 
-
-    } 
-
-});  
-
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function(event) {
+  document.getElementById("booking-Form").addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    emailjs.sendForm(
-      "service_kyzr0f1",
-      "template_ukkn3h9",
-      this
-    )
-    .then(function() {
+    alert("Booked successfully! Enjoy your movie.");
 
-      alert("Message Sent Successfully!");
 
-    })
-    .catch(function(error) {
+    document.getElementById("booking-message").style.display = "block";
+    this.reset();
 
-      console.log(error);
+  })
 
-      alert("Failed to send");
 
-    });
 
-});
+
+
+
+
